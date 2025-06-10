@@ -37,7 +37,7 @@
 5. **Step 5 - link wiil be generated `http://127.0.0.1:8000/` like this add admin at last `http://127.0.0.1:8000/admin` login page will be there .... login that page.**
    **You can see this user profile.** <br>
    <img src="Admin.png" width="700px"><br>
-   **Add the user**<br>
+   **Add Users**<br>
    <img src="user_add.png" width="700px">
 6. **Step 6 - now come to vs code and go to the templates folder in your app and make `profile_list.html` this file, add the code**
     ```bash
