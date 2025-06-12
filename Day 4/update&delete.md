@@ -12,9 +12,9 @@
         "contact_app",  // Changes is here.
     ]
     ```
-2.  **Step 2 - Create a templates folder in app than make three files in folder**
-    **`dashboard.html`**
-    **`index.html`**
+2.  **Step 2 - Create a templates folder in app than make three files in folder**<br>
+    **`dashboard.html`**<br>
+    **`index.html`**<br>
     **`edit.html`**
 
 3.  **Step 3 - Go to the `models.py` file\*and make a class a class**
@@ -27,7 +27,15 @@
         msg = models.TextField()
     ```
 
-4.  **Step 4 - Migrate the files using terimal**
+    **then go to the `admin.py` in your app
+    ```bash
+    from django.contrib import admin
+    from .models import Msg
+
+    admin.site.register(Msg)
+    ```
+    
+5.  **Step 4 - Migrate the files using terimal**
 
     ```bash
     python manage.py makemigrations
@@ -37,7 +45,7 @@
     python manage.py migrate
     ```
 
-5.  **Step 5 - Go to the `views.py` in your app and connect with templates files.**
+6.  **Step 5 - Go to the `views.py` in your app and connect with templates files.**
 
     ```bash
     from django.shortcuts import render , redirect
@@ -87,7 +95,7 @@
         return redirect("/")
     ```
 
-6.  **Step 6 - Go the `dashboard.html` file in you templates folder.**
+7.  **Step 6 - Go the `dashboard.html` file in you templates folder.**
 
     ````bash
     <!DOCTYPE html>
@@ -161,7 +169,7 @@
         </html>
     ```
 
-7.  **Step 7 - Go the `edit.html` file in you templates folder.**
+8.  **Step 7 - Go the `edit.html` file in you templates folder.**
 
     ```bash
     <!DOCTYPE html>
@@ -235,7 +243,7 @@
     </html>
     ```
 
-8.  **Step 8 - Go the `index.html` file in you templates folder.**
+9.  **Step 8 - Go the `index.html` file in you templates folder.**
 
     ```bash
     <!DOCTYPE html>
@@ -302,7 +310,7 @@
     </html>
     ```
 
-9.  **Step 9 - Make new file named `urls.py` in app and paste this code.**
+10.  **Step 9 - Make new file named `urls.py` in app and paste this code.**
     ```bash
     from django.urls import path
     from . import views
@@ -314,7 +322,7 @@
         path("delete/<did>",views.delete),
     ]
     ```
-10. **Step 10 - Now go to project `urls.py` file and update it.**
+11. **Step 10 - Now go to project `urls.py` file and update it.**
     ```bash
     from django.contrib import admin
     from django.urls import path , include
@@ -325,7 +333,7 @@
     ]
     ```
 
-11. **Step 11 - repeat step 4 in terminal**
+12. **Step 11 - repeat step 4 in terminal**
     ```bash
     python manage.py makemigrations
     ```
@@ -334,7 +342,7 @@
     python manage.py migrate
     ```
 
-12. **Step 12 - Run your server with this command**
+13. **Step 12 - Run your server with this command**
     ```bash
     python manage.py runserver
     ```
