@@ -35,7 +35,7 @@
     admin.site.register(Msg)
     ```
     
-5.  **Step 4 - Migrate the files using terimal**
+4.  **Step 4 - Migrate the files using terimal**
 
     ```bash
     python manage.py makemigrations
@@ -45,7 +45,7 @@
     python manage.py migrate
     ```
 
-6.  **Step 5 - Go to the `views.py` in your app and connect with templates files.**
+5.  **Step 5 - Go to the `views.py` in your app and connect with templates files.**
 
     ```bash
     from django.shortcuts import render , redirect
@@ -95,7 +95,7 @@
         return redirect("/")
     ```
 
-7.  **Step 6 - Go the `dashboard.html` file in you templates folder.**
+6.  **Step 6 - Go the `dashboard.html` file in you templates folder.**
 
     ````bash
     <!DOCTYPE html>
@@ -169,7 +169,7 @@
         </html>
     ```
 
-8.  **Step 7 - Go the `edit.html` file in you templates folder.**
+7.  **Step 7 - Go the `edit.html` file in you templates folder.**
 
     ```bash
     <!DOCTYPE html>
@@ -243,7 +243,7 @@
     </html>
     ```
 
-9.  **Step 8 - Go the `index.html` file in you templates folder.**
+8.  **Step 8 - Go the `index.html` file in you templates folder.**
 
     ```bash
     <!DOCTYPE html>
@@ -310,7 +310,7 @@
     </html>
     ```
 
-10.  **Step 9 - Make new file named `urls.py` in app and paste this code.**
+9.  **Step 9 - Make new file named `urls.py` in app and paste this code.**
     ```bash
     from django.urls import path
     from . import views
@@ -322,11 +322,12 @@
         path("delete/<did>",views.delete),
     ]
     ```
-11. **Step 10 - Now go to project `urls.py` file and update it.**
+10. **Step 10 - Now go to project `urls.py` file and update it.**
+    
     ```bash
+    
     from django.contrib import admin
     from django.urls import path , include
-
     urlpatterns = [
         path("admin/", admin.site.urls),
         path("",include("contact_app.urls")),   
